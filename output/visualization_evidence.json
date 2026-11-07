@@ -1,0 +1,29 @@
+{
+  "critique": [
+    {
+      "category": "unsupported claim",
+      "problem": "The title says that center-based rehab caused better attendance, but the chart only compares attendance percentages and does not establish causation.",
+      "repair": "Use a descriptive title 'Rehabilitation attendance by program and quarter'."
+    },
+    {
+      "category": "truncated baseline",
+      "problem": "The y-axis starts near 76%, which visually exaggerates the small differences in attendance between programs.",
+      "repair": "Start the bar-chart y-axis at 0% with ax.set_ylim(0, 100)."
+    },
+    {
+      "category": "missing unit",
+      "problem": "The y-axis has no label, so readers may confuse the values with percentages or raw counts.",
+      "repair": "Label the y-axis 'Attendance (%)'."
+    },
+    {
+      "category": "color-only encoding",
+      "problem": "Only red versus green separates the seasons, and the bars use the same hatch pattern; colorblind readers may not be able to tell them apart.",
+      "repair": "'Use colorblind-safe colors plus a different hatch or direct label for each program."
+    },
+    {
+      "category": "distracting decoration",
+      "problem": "Thick black edges, a heavy grid, and the same hatch on every bar carry no data.",
+      "repair": "Drop the edges and grid and keep hatches only where they mark the season."
+    }
+  ]
+}
